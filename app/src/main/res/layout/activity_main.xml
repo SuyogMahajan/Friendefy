@@ -30,7 +30,7 @@
         android:layout_height="45dp"
         android:background="@drawable/login_set"
         android:fontFamily="@font/basic"
-        android:hint="User id"
+        android:hint="User name"
         android:inputType="textPersonName"
         android:paddingHorizontal="20dp"
         android:textSize="23sp"
