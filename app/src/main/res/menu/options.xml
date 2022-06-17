@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/scanner" android:title= "Scanner" android:icon="@drawable/qr_code_scanner_"/>
+    <item android:id="@+id/qr" android:title="Qr" android:icon="@drawable/qr_code" />
+    <item android:id="@+id/profile" android:title="profile" android:icon="@drawable/ic_person" />
+
+</menu>
