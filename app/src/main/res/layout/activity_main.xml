@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -30,7 +30,7 @@
         android:layout_height="45dp"
         android:background="@drawable/login_set"
         android:fontFamily="@font/basic"
-        android:hint="User name"
+        android:hint="User id"
         android:inputType="textPersonName"
         android:paddingHorizontal="20dp"
         android:textSize="23sp"
@@ -101,4 +101,4 @@
         app:layout_constraintVertical_bias="0.105" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

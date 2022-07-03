@@ -1,14 +1,19 @@
 package com.example.friendefy
 
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.Color.*
 import android.os.Bundle
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.app.ActivityCompat.requestPermissions
 import androidx.fragment.app.Fragment
 import com.example.friendefy.databinding.ActivityMain2Binding
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
+import java.security.Permission
 import java.util.*
 
 
@@ -20,6 +25,10 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMain2Binding.inflate(layoutInflater)
+
+        if(ActivityCompat.checkSelfPermission(this,android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,arrayOf(android.Manifest.permission.CAMERA),1234)
+        }
 
         setContentView(binding.root)
         val qr = QrCode()

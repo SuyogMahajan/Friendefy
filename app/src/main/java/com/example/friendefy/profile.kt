@@ -2,10 +2,16 @@ package com.example.friendefy
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Size
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.camera.camera2.internal.compat.workaround.TargetAspectRatio.RATIO_16_9
+import androidx.camera.core.AspectRatio
+import androidx.camera.core.Preview
+import androidx.camera.core.impl.PreviewConfig
+import androidx.camera.extensions.internal.PreviewConfigProvider
 import com.example.friendefy.databinding.FragmentProfileBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -43,11 +49,12 @@ class profile : Fragment() {
 
         binding.button2.setOnClickListener {
             fragdata.m = binding.editTextTextPersonName2.text.toString()
-
         }
 
         return binding.root
     }
+
+
 
     companion object {
         /**

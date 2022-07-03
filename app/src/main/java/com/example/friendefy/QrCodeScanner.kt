@@ -1,10 +1,26 @@
 package com.example.friendefy
 
+import android.app.Application
+import android.content.Context
+import android.graphics.Camera
+import android.graphics.SurfaceTexture
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
+import android.util.Size
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
+import androidx.camera.core.AspectRatio
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.Preview
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import com.example.friendefy.databinding.FragmentQrCodeScannerBinding
+import java.nio.channels.AsynchronousFileChannel.open
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,22 +36,9 @@ class QrCodeScanner : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var binding: FragmentQrCodeScannerBinding
+    private lateinit var mCamera:Camera
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_qr_code_scanner, container, false)
-    }
 
     companion object {
         /**
@@ -55,5 +58,37 @@ class QrCodeScanner : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+
+    private fun startCamera() {
+        val cameraProviderFuture = activity?.let { ProcessCameraProvider.getInstance(it.baseContext) }
+
+        cameraProviderFuture?.addListener({
+            // Used to bind the lifecycle of cameras to the lifecycle owner
+            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
+
+            // Preview
+            val preview = Preview.Builder()
+                .build()
+                .also {
+                    it.setSurfaceProvider(binding.viewFinder.surfaceProvider)
+                }
+            // Select back camera as a default
+            val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+
+            try {
+                // Unbind use cases before rebinding
+                cameraProvider.unbindAll()
+
+                // Bind use cases to camera
+                cameraProvider.bindToLifecycle(
+                    this, cameraSelector, preview)
+
+            } catch(exc: Exception) {
+                Log.e("hello??", "Use case binding failed", exc)
+            }
+
+        }, activity?.let { ContextCompat.getMainExecutor(it.baseContext) })
     }
 }

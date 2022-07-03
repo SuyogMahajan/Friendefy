@@ -4,21 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/drawable/friendify_circle.xml" value="0.167" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/drawable/ic_person.xml" value="0.167" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/drawable/links.xml" value="0.167" />
         <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/drawable/login_back.xml" value="0.2" />
         <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/drawable/login_set.xml" value="0.167" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/drawable/nevigation_item.xml" value="0.121" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/drawable/new_lay.xml" value="0.167" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/drawable/qr_code.xml" value="0.167" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/drawable/qr_code_scanner_.xml" value="0.167" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/drawable/qr_holder.xml" value="0.167" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/layout/activity_main2.xml" value="0.264" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/layout/fragment_qr_code.xml" value="0.264" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/layout/fragment_qr_code_scanner.xml" value="0.25" />
-        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/menu/options.xml" value="0.25" />
+        <entry key="..\:/Users/Dell/Desktop/AndroidStudioProjects/Friendefy/app/src/main/res/layout/activity_main.xml" value="0.176" />
       </map>
     </option>
   </component>
