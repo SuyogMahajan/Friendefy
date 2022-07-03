@@ -1,25 +1,14 @@
 package com.example.friendefy
 
-import android.app.Application
-import android.content.Context
 import android.graphics.Camera
-import android.graphics.SurfaceTexture
 import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.util.Log
-import android.util.Size
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.FrameLayout
-import androidx.camera.core.AspectRatio
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import com.example.friendefy.databinding.FragmentQrCodeScannerBinding
-import java.nio.channels.AsynchronousFileChannel.open
 
 
 // TODO: Rename parameter arguments, choose names that match
